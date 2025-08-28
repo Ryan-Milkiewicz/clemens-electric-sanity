@@ -21,13 +21,14 @@ export const Service = defineType({
     defineField({
       title: 'Description',
       name: 'description',
-      type: 'string',
+      type: 'array',
+      of: [{type: 'block'}],
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      title: 'Icon',
-      name: 'icon',
-      type: 'image',
-    }),
+    // defineField({
+    //   title: 'Icon',
+    //   name: 'icon',
+    //   type: 'image',
+    // }),
   ],
 })
