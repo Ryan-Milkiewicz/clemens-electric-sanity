@@ -19,6 +19,12 @@ export const Market = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      title: 'Alt Text',
+      name: 'altText',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       title: 'Description',
       name: 'description',
       type: 'array',
