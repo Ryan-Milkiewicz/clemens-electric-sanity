@@ -7,6 +7,7 @@ import {ServicesSection} from './ServicesSection'
 import {Question} from './Question'
 import {QuestionCategory} from './QuestionCategory'
 import {FAQSection} from './FAQSection'
+import {Post} from './Post'
 
 export const schemaTypes = [
   HeroSection,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   Question,
   QuestionCategory,
   FAQSection,
+  Post,
 ]
