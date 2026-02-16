@@ -1,4 +1,5 @@
 import {AboutSection} from './AboutSection'
+import { DynamicCityPages } from './DynamicCityPages'
 import {HeroSection} from './HeroSection'
 import {Market} from './Market'
 import {MarketSection} from './MarketSection'
@@ -11,6 +12,7 @@ import {Post} from './Post'
 
 export const schemaTypes = [
   HeroSection,
+  DynamicCityPages,
   AboutSection,
   ServicesSection,
   Service,
