@@ -11,6 +11,18 @@ export const Service = defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
+      defineField({
+      title: 'Page Title',
+      name: 'pageTitle',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+      defineField({
+      title: 'SEO Content',
+      name: 'seoContent',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
     defineField({
       title: 'Slug',
       name: 'slug',
@@ -18,13 +30,13 @@ export const Service = defineType({
       options: {source: 'title'},
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      title: 'Description',
-      name: 'description',
-      type: 'array',
-      of: [{type: 'block'}],
-      validation: (rule) => rule.required(),
-    }),
+    // defineField({
+    //   title: 'Description',
+    //   name: 'description',
+    //   type: 'array',
+    //   of: [{type: 'block'}],
+    //   validation: (rule) => rule.required(),
+    // }),
     defineField({
       title: 'Image',
       name: 'image',
@@ -47,6 +59,12 @@ export const Service = defineType({
         },
       ],
       validation: (rule) => rule.required(),
+    }),
+      defineField({
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
   ],
 })
