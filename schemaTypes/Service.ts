@@ -11,13 +11,13 @@ export const Service = defineType({
       type: 'string',
       validation: (rule) => rule.required(),
     }),
-      defineField({
+    defineField({
       title: 'Page Title',
       name: 'pageTitle',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
-      defineField({
+    defineField({
       title: 'SEO Content',
       name: 'seoContent',
       type: 'string',
@@ -60,11 +60,22 @@ export const Service = defineType({
       ],
       validation: (rule) => rule.required(),
     }),
-      defineField({
+    defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [
+        {type: 'block'},
+        {
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            {name: 'alt', type: 'string'},
+            {name: 'caption', type: 'string'},
+          ],
+        },
+      ],
+      // of: [{type: 'block'}],
     }),
   ],
 })
