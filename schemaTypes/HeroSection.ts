@@ -18,15 +18,21 @@ export const HeroSection = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      title: 'Alt Text',
-      name: 'altText',
-      type: 'string',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      title: 'Image',
-      name: 'image',
-      type: 'image',
+      title: 'Images',
+      name: 'images',
+      type: 'array',
+      of: [
+        {
+          type: 'image',
+          fields: [
+            defineField({
+              name: 'alt',
+              type: 'string',
+              title: 'Alt Text',
+            }),
+          ],
+        },
+      ],
     }),
   ],
 })
